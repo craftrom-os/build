@@ -216,11 +216,11 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
 
-  android_version = target_info.GetBuildProp("ro.build.version.release")
+  android_version = target_info.GetBuildProp("ro.custom.version")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("org.craftrom.build_date")
+  build_date = target_info.GetBuildProp("ro.custom.build.date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("ro.lineage.device")
+  device = target_info.GetBuildProp("ro.custom.device")
   script.PrintCraftRomBanner(android_version, build_id, build_date,
                                   security_patch, device)
                                   
