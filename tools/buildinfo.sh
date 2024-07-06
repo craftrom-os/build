@@ -57,5 +57,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
 fi
 
 echo "ro.lineage.device=$CRAFTROM_DEVICE"
+echo "ro.custom.device=$CRAFTROM_DEVICE"
 
 echo "# end build properties"
